@@ -17,7 +17,8 @@
                     </div>
                     <div class="col-xl-9">
                         <h5>INSAN MUTTAQIN ISLAMIC SCHOOL</h5>
-                        <p style="color: #7e8d9f;font-size: 10px;">Invoice >> <strong>{{ $result->invoice }}</strong></p>
+                        <p style="color: #7e8d9f;font-size: 10px;">slip pembayaran >> <strong>{{ $result->invoice }}</strong>
+                        </p>
                     </div>
                     <div class="col-xl-2 float-end">
                         <button onclick="window.print()" class="btn btn-light text-capitalize border-0 d-print-none"
@@ -51,7 +52,7 @@
                             </ul>
                         </div>
                         <div class="col-xl-4">
-                            <p class="text-muted">Invoice</p>
+                            <p class="text-muted"></p>
                             <ul class="list-unstyled">
                                 <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
                                         class="fw-bold">ID:</span>{{ $result->invoice }}</li>

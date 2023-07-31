@@ -214,7 +214,7 @@ class ProfileController extends Controller
             $user->password = Hash::make($request->password);
             $user->save();
 
-            return redirect('/profile')->with('success', 'password berhasil di ubah');
+            return redirect('/profile/'.$id)->with('success', 'password berhasil di ubah');
         } else {
             return back()->withErrors(['old_password' => 'Password Sebelumnya Tidak Cocok..!']);
         }

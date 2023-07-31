@@ -197,13 +197,13 @@
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Foto</label>
                                     <input class="form-control" type="file" name="foto"
-                                        value="Upload Publication"> <span class="text-sm">{{ $data->avatar }}</span>>
+                                        value="Upload Publication"> <span class="text-sm">{{ $data->avatar }}</span>
                                 </div>
                     @endif
 
 
                     <button type="submit" class="btn btn-primary me-2">Submit</button>
-                    <a href="{{ url('/profile') }}" class="btn btn-light">Cancel</a>
+                    <a href="{{ url('/profile/' . auth()->user()->id) }}" class="btn btn-light">Cancel</a>
                     </form>
                 </div>
             </div>

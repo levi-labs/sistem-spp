@@ -62,7 +62,7 @@
                                 <th>Nama</th>
                                 <th>Jenis Biaya</th>
                                 <th>Jumlah</th>
-                                <th>ID Transaksi</th>
+                                {{-- <th>ID Transaksi</th> --}}
                                 <th>Status Pembayaran</th>
                                 <th>Option</th>
                             </tr>
@@ -74,7 +74,7 @@
                                     <td>{{ $dt->siswa->nama }}</td>
                                     <td>{{ $dt->jenis_biaya }}</td>
                                     <td>@currency($dt->jumlah)</td>
-                                    <td>{{ $dt->id_transaksi }}</td>
+                                    {{-- <td>{{ $dt->id_transaksi }}</td> --}}
                                     <td class="text-center"><label class="badge badge-danger">{{ $dt->status }}</label>
                                     </td>
                                     @php
@@ -85,10 +85,11 @@
                                         // dd($cekTransaksi);
                                     @endphp
                                     @if ($cekTransaksi > 0)
-                                        <td><button class="btn btn-secondary btn-sm" disabled>add</button></td>
+                                        <td><button class="btn btn-secondary btn-sm" disabled>Tambah Pembayaran</button>
+                                        </td>
                                     @else
                                         <td><a href="{{ url('/tambah-pembayaran/' . $dt->id) }}"
-                                                class="btn btn-info btn-sm">add</a></td>
+                                                class="btn btn-info btn-sm">Tambah Pembayaran</a></td>
                                     @endif
                                     {{-- <td><a href="{{ url('/tambah-pembayaran/' . $dt->id) }}"
                                             class="btn btn-info btn-sm">add</a></td> --}}

@@ -32,12 +32,28 @@
                             <label for="exampleInputEmail1">Jenis Kelas</label>
                             <select class="form-select form-select-sm" aria-label=".form-select-sm example"
                                 name="jenis_kelas">
-                                <option selected>Pilih Kelas</option>
+                                <option selected disabled>Pilih</option>
                                 @foreach ($kelas as $kls)
                                     <option>{{ $kls->nama_kelas }}</option>
                                 @endforeach
                             </select>
                             @error('jenis_kelas')
+                                <div class="error">
+                                    <span class="text-danger">{{ $message }}</span>
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Kelas</label>
+                            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="kelas">
+                                <option selected disabled>Pilih</option>
+
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+
+                            </select>
+                            @error('kelas')
                                 <div class="error">
                                     <span class="text-danger">{{ $message }}</span>
                                 </div>

@@ -15,34 +15,35 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function __construct()
-    {
-            // $datenow = time();
-            // $monthId = Carbon::now()->isoFormat('MMMM');
-            // $month  = date('F', $datenow);
-            // $date = date('j',$datenow);
-            // $now = Carbon::now()->isoFormat('D MMMM Y');
+    // public function __construct()
+    // {
+    //         $datenow = time();
+    //         $monthId = Carbon::now()->isoFormat('MMMM');
+    //         $month  = date('F', $datenow);
+    //         $date = date('j',$datenow);
+    //         $now = Carbon::now()->isoFormat('D MMMM Y');
 
-            // if ($date == 4) {
-            //         $siswa = Siswa::all();
-            //         foreach ($siswa as $key => $value) {
-            //             $query = Transaksi::where('tanggal', $now)->count();
-            //             $ceksiswa = Transaksi::where('siswa_id', $value->id )->count();
+
+    //         if ($date == 31) {
+    //                 $siswa = Siswa::all();
+    //                 foreach ($siswa as $key => $value) {
+    //                     $query = Transaksi::where('tanggal', $now)->count();
+    //                     $ceksiswa = Transaksi::where('siswa_id', $value->id )->count();
                     
-            //                  if ($query == 0 || $ceksiswa == 0  ) {
-            //                      if ($kelas= Kelas::where('nama_kelas',$value->jenis_kelas)->first() ) {
-            //                         $transaksi = new Transaksi();
-            //                         $transaksi->siswa_id = $value->id;
-            //                         $transaksi->id_transaksi = $transaksi->idTransaksi();
-            //                         $transaksi->jenis_biaya = 'SPP- '.$kelas->nama_kelas;
-            //                         $transaksi->jumlah      = $kelas->harga;
-            //                         $transaksi->tanggal     = $now;
-            //                         $transaksi->status      = 'UNPAID';
-            //                         $transaksi->save();
-            //                         continue;
-            //                     }  
-            //                 }
-            //          }  
-            // }
-    }
+    //                          if ($query == 0 || $ceksiswa == 0  ) {
+    //                              if ($kelas= Kelas::where('nama_kelas',$value->jenis_kelas)->first() ) {
+    //                                 $transaksi = new Transaksi();
+    //                                 $transaksi->siswa_id = $value->id;
+    //                                 $transaksi->id_transaksi = $transaksi->idTransaksi();
+    //                                 $transaksi->jenis_biaya = 'SPP- '.$kelas->nama_kelas;
+    //                                 $transaksi->jumlah      = $kelas->harga;
+    //                                 $transaksi->tanggal     = $now;
+    //                                 $transaksi->status      = 'UNPAID';
+    //                                 $transaksi->save();
+    //                                 // continue;
+    //                             }  
+    //                         }
+    //                  }  
+    //         }
+    // }
 }

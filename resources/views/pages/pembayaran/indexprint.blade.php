@@ -25,7 +25,6 @@
             <th>Nama</th>
             <th>Jenis Biaya</th>
             <th>Jumlah</th>
-            <th>ID Transaksi</th>
             <th>Status Pembayaran</th>
 
         </tr>
@@ -35,7 +34,7 @@
                 <td>{{ $dt->siswa->nama }}</td>
                 <td>{{ $dt->jenis_biaya }}</td>
                 <td>@currency($dt->jumlah)</td>
-                <td>{{ $dt->id_transaksi }}</td>
+                {{-- <td>{{ $dt->id_transaksi }}</td> --}}
                 <td class=""><label class="badge badge-danger">{{ $dt->status }}</label>
                 </td>
 

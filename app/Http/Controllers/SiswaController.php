@@ -69,6 +69,7 @@ class SiswaController extends Controller
             $siswa->nama        = $request->nama;
             $siswa->email       = $request->email;
             $siswa->jenis_kelas = $request->jenis_kelas;
+            $siswa->tingkat_kelas = $request->kelas;
             $siswa->no_hp       = $request->no_hp;
             $siswa->user_id     = $user->id;
             $siswa->periode     = $request->periode;
@@ -126,6 +127,7 @@ class SiswaController extends Controller
             $siswa->nama        = $request->nama;
             $siswa->email       = $request->email;
             $siswa->jenis_kelas = $request->jenis_kelas;
+            $siswa->tingkat_kelas = $request->kelas;
             $siswa->no_hp       = $request->no_hp;
             $siswa->periode     = $request->periode;
             $siswa->update();

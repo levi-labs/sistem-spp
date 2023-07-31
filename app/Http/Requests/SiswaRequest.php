@@ -29,6 +29,7 @@ class SiswaRequest extends FormRequest
             'no_hp' => 'required',
             'email' => 'required',
             'jenis_kelas' => 'required',
+            'kelas' => 'required',
             'periode' => 'required'
         ];
     }

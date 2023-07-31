@@ -15,7 +15,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $title = 'Daftar Kelas';
+        $title = 'Daftar Jenis Kelas';
 
         $data = Kelas::all();
 

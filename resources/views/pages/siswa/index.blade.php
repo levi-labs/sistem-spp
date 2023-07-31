@@ -38,7 +38,7 @@
                                     <td class="text-center">{{ $dt->nis }}</td>
                                     <td class="text-center">{{ $dt->nama }}</td>
 
-                                    <td class="text-center">{{ $dt->jenis_kelas }}</td>
+                                    <td class="text-center">{{ $dt->tingkat_kelas . ' - ' . $dt->jenis_kelas }}</td>
                                     <td class="text-center">{{ $dt->periode }}</td>
                                     <td class="text-center">
                                         <a class="btn btn-success btn-sm"

@@ -16,7 +16,7 @@
                                 <th>Nama</th>
                                 <th>Jenis Biaya</th>
                                 <th>Jumlah</th>
-                                <th>Invoice</th>
+
                                 <th>Status Pembayaran</th>
                                 {{-- <th>detail</th> --}}
                             </tr>
@@ -30,7 +30,7 @@
                                     </td>
                                     <td>{{ $dt->pembayarans->jenis_biaya }}</td>
                                     <td>@currency($dt->pembayarans->jumlah)</td>
-                                    <td>{{ $dt->invoice }}</td>
+                                    {{-- <td>{{ $dt->invoice }}</td> --}}
                                     <td class="text-center"><label class="badge badge-success">{{ $dt->status }}</label>
                                     </td>
                                     {{-- <td><button class="btn btn-info btn-sm">detail</button></td> --}}

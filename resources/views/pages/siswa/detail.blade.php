@@ -47,6 +47,8 @@
                         <h5 class="text-dark">{{ $data->nama }}</h5>
 
                         <p class="text-dark">Periode:&nbsp;{{ $data->periode }}</p>
+                        <p class="text-dark">Kelas:&nbsp;{{ $data->tingkat_kelas }}</p>
+
                         <i class="far fa-edit mb-5"></i>
 
 

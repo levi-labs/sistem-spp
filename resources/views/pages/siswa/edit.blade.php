@@ -45,6 +45,22 @@
                                 </div>
                             @enderror
                         </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Kelas</label>
+                            <select class="form-select form-select-sm" aria-label="form-select-sm example" name="kelas">
+                                <option selected disabled>Pilih</option>
+
+                                <option {{ $siswa->tingkat_kelas == 1 ? 'selected' : '' }}>1</option>
+                                <option {{ $siswa->tingkat_kelas == 2 ? 'selected' : '' }}>2</option>
+                                <option {{ $siswa->tingkat_kelas == 3 ? 'selected' : '' }}>3</option>
+
+                            </select>
+                            @error('kelas')
+                                <div class="error">
+                                    <span class="text-danger">{{ $message }}</span>
+                                </div>
+                            @enderror
+                        </div>
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">No Handphone</label>

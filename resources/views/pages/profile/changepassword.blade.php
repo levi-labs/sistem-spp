@@ -42,7 +42,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary me-2">Submit</button>
-                        <a href="{{ url('/profile') }}" class="btn btn-light">Cancel</a>
+                        <a href="{{ url('/profile/' . auth()->user()->id) }}" class="btn btn-light">Cancel</a>
                     </form>
                 </div>
             </div>

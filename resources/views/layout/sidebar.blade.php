@@ -4,19 +4,52 @@
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Dashboard</span>
           </a>
-          @if (auth()->user()->akses_user == 'bendahara' || auth()->user()->akses_user == 'siswa')
-              <a class="nav-link" href="{{ url('/cek-invoice') }}">
-                  <i class="mdi mdi-receipt-text-check menu-icon"></i>
-                  <span class="menu-title">Cek invoice</span>
-              </a>
-          @endif
-          @if (auth()->user()->akses_user == 'bendahara')
-              <a class="nav-link" href="{{ url('/report') }}">
+          @if (auth()->user()->akses_user == 'siswa')
+      <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
+              aria-controls="form-elements">
+              <i class="mdi mdi-finance menu-icon"></i>
+              <span class="menu-title">History Pembayaran</span>
+              <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"><a class="nav-link" href="{{ url('/history-semua') }}">Semua
+                      </a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ url('/history-belum') }}">Belum Bayar
+                      </a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ url('/history-sudah') }}">Sudah Bayar
+                      </a></li>
+              </ul>
+          </div>
+      </li>
+      @endif
+      </li>
+      @if (auth()->user()->akses_user == 'bendahara')
+          {{-- <a class="nav-link" href="{{ url('/report') }}">
+              <i class="mdi mdi-finance menu-icon"></i>
+              <span class="menu-title">Report</span>
+          </a> --}}
+          <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
+                  aria-controls="form-elements">
                   <i class="mdi mdi-finance menu-icon"></i>
                   <span class="menu-title">Report</span>
+                  <i class="menu-arrow"></i>
               </a>
-          @endif
-      </li>
+              <div class="collapse" id="form-elements">
+                  <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="{{ url('/report-semua') }}">Semua
+                          </a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ url('/report-belum') }}">Belum Bayar
+                          </a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{ url('/report-sudah') }}">Sudah Bayar
+                          </a></li>
+                  </ul>
+              </div>
+          </li>
+      @endif
+
       {{-- <li class="nav-item">
           <a class="nav-link" href="{{ url('/daftar-pembayaran-siswa') }}">
               <i class="mdi  mdi-currency-usd menu-icon"></i>
@@ -47,7 +80,7 @@
                       </li>
                   @endif
                   @if (auth()->user()->akses_user == 'bendahara')
-                      <li class="nav-item"> <a class="nav-link" href="{{ url('/daftar-kelas') }}">Daftar Kelas</a>
+                      <li class="nav-item"> <a class="nav-link" href="{{ url('/daftar-kelas') }}">Jenis Kelas</a>
                       </li>
                       <li class="nav-item"> <a class="nav-link" href="{{ url('/daftar-biaya-lain') }}">Biaya Lain</a>
                       </li>
@@ -92,14 +125,16 @@
 
           <li class="nav-item nav-category">User Management</li>
           <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false"
+                  aria-controls="auth">
                   <i class="menu-icon mdi mdi-account-circle-outline"></i>
                   <span class="menu-title">Daftar Users</span>
                   <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="auth">
                   <ul class="nav flex-column sub-menu">
-                      <li class="nav-item"> <a class="nav-link" href="{{ url('/daftar-users') }}"> Daftar All Users </a>
+                      <li class="nav-item"> <a class="nav-link" href="{{ url('/daftar-users') }}"> Daftar All Users
+                          </a>
                       </li>
                   </ul>
               </div>

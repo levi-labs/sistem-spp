@@ -64,7 +64,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/update-biaya-lain/{id}', [BiayaLainController::class, 'update']);
     Route::get('/delete-biaya-lain/{id}', [BiayaLainController::class, 'destroy']);
     Route::get('/tambah-ke-siswa/{id}', [BiayaLainController::class, 'addBiayakeSiswa']);
-    Route::post('/store-biaya-siswa/{id}', [BiayaLainController::class, 'storeBiayakeSIswa']);
+    Route::post('/take-siswa', [BiayaLainController::class, 'getSiswa']);
+    // Route::post('/store-biaya-siswa/{id}', [BiayaLainController::class, 'storeBiayakeSIswa']);
+    Route::post('/store-biaya-siswa/{id}', [BiayaLainController::class, 'storeAllSiswa']);
 
     //siswa
     Route::get('/daftar-siswa', [SiswaController::class, 'index']);
@@ -110,8 +112,26 @@ Route::group(['middleware' => 'auth'], function () {
 
     //report
 
-    Route::get('/report', [ReportController::class, 'index']);
+    Route::get('/report-semua', [ReportController::class, 'index']);
     Route::post('/report-print', [ReportController::class, 'index']);
+
+    
+    Route::get('/report-belum', [ReportController::class, 'belumBayar']);
+    Route::post('/print-belum', [ReportController::class, 'belumBayar']);
+
+    Route::get('/report-sudah', [ReportController::class, 'sudahDibayar']);
+    Route::post('/print-sudah', [ReportController::class, 'sudahDibayar']);
+
+    Route::get('/history-semua', [ReportController::class, 'historyAll']);
+    Route::post('/report-history', [ReportController::class, 'historyAll']);
+
+    
+    Route::get('/history-belum', [ReportController::class, 'historyBelum']);
+    Route::post('/print-history-belum', [ReportController::class, 'historyBelum']);
+
+    Route::get('/history-sudah', [ReportController::class, 'historySudah']);
+    Route::post('/print-history-sudah', [ReportController::class, 'historySudah']);
+    
 });
 Route::post('/callback-pembayaran', [PembayaranController::class, 'callbackCheckout']);
 Route::get('/logout', function () {
